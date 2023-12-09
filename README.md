@@ -1,3 +1,3 @@
-# personal-portfolio-website
+# myreactjs-portfolio
 
-![react portfolio website](/src/assets/github%20cover.png)
+Basic reactjs website showing all about me!
