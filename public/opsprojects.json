@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1, "name" : "Ci-Cd with Kubernetes", "description" : "A basic continue integration/deployment project that build, release and deploy a static app in a kubernetes cluster (minikube) via jenkins.", "image": "/src/assets/ev-opsproject-1.png", "url": "https://github.com/evandjefie/cicd-k8s"
+    },
+    {
+        "id" : 2, "name" : "Mystatic-portfolio Helm Chart", "description" : "Helm Chart for my-static-portfolio docker image", "image": "/src/assets/ev-opsproject-2.png", "url": "https://github.com/evandjefie/k8s-helm-mern"
+    },
+    {
+        "id" : 3, "name" : "Monitoring Ansible", "description" : "Ansible project that deploy and configure Prometheus and Grafana to monitor a remote application.", "image": "/src/assets/ev-opsproject-3.png", "url": "https://gitlab.com/evandjefie/monitoring_ansible"
+    },
+    {
+        "id" : 4, "name" : "Deploy Eks", "description" : "Creation of a customized cloud infrastructure (vpc, ingress, subnet, etc.) and cluster on aws eks with terraform.", "image": "/src/assets/ev-opsproject-4.png", "url": "https://gitlab.com/evandjefie/deploy-eks"
+    }    
+]
