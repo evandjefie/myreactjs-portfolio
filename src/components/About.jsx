@@ -19,7 +19,9 @@ const About = () => {
             Spending time developing, building, deploying and monitoring app based on cloud is something I enjoy a lot. For my last cloud devops experience, I have deploy with terraform a monitoring server that collects system metrics (RA﻿M, DISK, CPU), as well as applications metrics .
 
           </p>
-          <button className="btn-primary">Contact Me</button>
+          <a href="https://wa.me/c/2250160125373" target="_blank" rel="noopener noreferrer">
+            <button className="btn-primary">Contact Me</button>
+          </a>
         </div>
       </div>
     </div>

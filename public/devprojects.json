@@ -6,11 +6,12 @@
         "id" : 2, "name" : "Zabliboua Holding", "description" : "Extranet platform of a holding company.", "image": "/src/assets/ev-devproject-2.png", "url": "https://z-h.site"
     },
     {
-        "id" : 3, "name" : "MERN TodoVoiceApp", "description" : "A basic todoapp developped with reactjs, expressjs(api) and mongo (db).", "image": "/src/assets/ev-devproject-3.png", "url": "https://github.com/evandjefie/"
+        "id" : 3, "name" : "Barakoo", "description" : "An Job finder Flutter application that connects clients with various home service providers such as electricians, plumbers, and other artisans.", "image": "/src/assets/ev-devproject-3.png", "url": "https://github.com/evandjefie/"
     },
     {
-        "id" : 4, "name" : "Todo Flutter Node", "description" : "A basic todoapp developped with flutter, expressjs(api) and mongo (db).", "image": "/src/assets/ev-devproject-4.png", "url": "https://github.com/evandjefie/todo_flutter_node"
+        "id" : 4, "name" : "Hub2Punch", "description" : "A Blog app made in Flutter to create, like and share lyric song", "image": "/src/assets/ev-devproject-3.png", "url": "https://github.com/evandjefie/"
+    },
+    {
+        "id" : 5, "name" : "Todo Flutter App", "description" : "A basic todoapp developped with flutter, expressjs(api) and mongo (db).", "image": "/src/assets/ev-devproject-4.png", "url": "https://github.com/evandjefie/todo_flutter_node"
     }
-
 ]
-

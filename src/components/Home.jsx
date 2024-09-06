@@ -18,7 +18,9 @@ const Home = () => {
           <p className="text-2xl text-body leading-9 mb-8">
             DevOps | FullStack Dev | Designer
           </p>
-          <button className="btn-primary">Get In Touch</button>
+          <a href="https://wa.me/c/2250160125373" target="_blank" rel="noopener noreferrer">          
+            <button className="btn-primary">Get In Touch</button>
+          </a>
         </div>        
       </div>
     </div>

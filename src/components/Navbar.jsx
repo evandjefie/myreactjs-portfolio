@@ -62,11 +62,11 @@ const Navbar = () => {
           </div>
 
           {/* contact me btn */}
-          <div className="lg:block hidden">
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
             <button className="px-4 py-2 bg-transparent border border-primary text-primary rounded hover:bg-primary hover:text-white transition-all duration-300">
               Contact Me
             </button>
-          </div>
+          </a>
 
           {/* btn for small devices */}
           <button onClick={toggleMenu} className="lg:hidden text-body text-3xl">
