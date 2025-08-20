@@ -193,15 +193,20 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                     </button>
                   </form>
                 ) : (
-                  <div className="space-y-6">
-                    <h3 className={`text-xl font-semibold text-center mb-6 ${
+                  <div className="space-y-3">
+                    <h3 className={`text-xl font-semibold text-center ${
                       isDark ? 'text-white' : 'text-gray-800'
                     }`}>
                       Autres Services
                     </h3>
+                    <h4 className={`text-lg font-semibold text-center mb-6 ${
+                      isDark ? 'text-white' : 'text-gray-800'
+                    }`}>
+                      Formulaire de Contact
+                    </h4>
                     <div className="space-y-4">
                                             <a 
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfA0vBEUVYVcCg9gN06_ikYLY2JuS3REQI4hbmpQNFzPJdSgg" 
+                        href="https://forms.gle/5rTviRVB2R46ELm26" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`flex items-center justify-between p-4 rounded-lg border transition-all ${
@@ -212,15 +217,64 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                       >
                         <div>
                           <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>
-                            Formulaire de contact
+                            Envie d'Identité Visuelle ?
                           </h4>
                           <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                            Remplissez notre formulaire détaillé
+                            Tu souhaites créer :<br/>
+                            <li>
+                              une identité visuelle forte pour ton projet ?                           
+                            </li>
+                            <li>
+                              une affiche ?
+                            </li>
+                            <li>
+                              un logo ?                              
+                            </li>
+                            <li>
+                              une maquette de qualité pour ton application ?                              
+                            </li>
+                            Remplis le formulaire
                           </p>
                         </div>
                         <ExternalLink className={isDark ? 'text-white' : 'text-gray-800'} size={20} />
                       </a>
                     </div>
+                    <div className="space-y-4">
+                                            <a 
+                        href="https://forms.gle/Hm4u9ydqu8aZn7yR8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center justify-between p-4 rounded-lg border transition-all ${
+                          isDark 
+                            ? 'bg-gray-700 border-gray-600 hover:bg-gray-600' 
+                            : 'bg-white border-gray-200 hover:bg-gray-50'
+                        }`}
+                      >
+                        <div>
+                          <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                            Envie de Boutique en ligne ?
+                          </h4>
+                          <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                            Tu souhaites faire plus de ventes dans la :<br/>
+                            <li>
+                              restauration ?                           
+                            </li>
+                            <li>
+                              vente de vêtement ?
+                            </li>
+                            <li>
+                              vente d'appareil ?                              
+                            </li>
+                            <li>
+                              vente de produit agroalimentaire ?                              
+                            </li>
+                            Remplis le formulaire
+                          </p>
+                        </div>
+                        <ExternalLink className={isDark ? 'text-white' : 'text-gray-800'} size={20} />
+                      </a>
+                    </div>
+
                   </div>
                 )}
               </div>

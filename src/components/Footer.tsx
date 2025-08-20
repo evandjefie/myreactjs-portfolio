@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Mail, Phone, MapPin, Linkedin, Github, Youtube } from 'lucide-react';
 
 interface FooterProps {

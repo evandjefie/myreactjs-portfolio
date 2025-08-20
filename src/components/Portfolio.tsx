@@ -184,12 +184,15 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
                 }`}>
                   {project.description}
                 </p>
-                <button className="flex items-center space-x-2 text-[#19a89e] hover:text-[#16968c] transition-colors">
-                  <a href={`flex ${project.url}`}>
-                    <span className="text-sm font-medium">
+                <button className="flex items-center space-x-2 text-[#19a89e] text-sm font-medium hover:text-[#16968c] transition-colors">
+                  <a 
+                  href={`${project.url}`}
+                  className='flex items-center space-x-2'
+                  >
+                    <span>
                       Voir le projet
+                    </span>
                     <ExternalLink size={16} />
-                    </span>                  
                   </a>
                 </button>
               </div>
