@@ -15,7 +15,11 @@ import {
   Settings,
   Box,
   BarChart3,
-  Activity
+  Activity,
+  // Design tools icons
+  Figma,
+  PenToolIcon,
+  Pen
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -25,42 +29,53 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ isDark }) => {
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
   const stackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
-      const skillsChildren = skillsRef.current?.children;
-      if (skillsChildren && skillsChildren.length > 0) {
-        const skillsArray = Array.from(skillsChildren);
-        gsap.from(skillsArray, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          }
+      if (skillsRef.current) {
+        const cards = Array.from(skillsRef.current.children);
+        gsap.set(cards, { autoAlpha: 0, y: 40 });
+
+        cards.forEach((card, index) => {
+          ScrollTrigger.create({
+            trigger: card,
+            start: "top 85%",
+            onEnter: () => {
+              gsap.to(card, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.6,
+                delay: index * 0.08,
+                ease: "power3.out"
+              });
+            },
+            once: true
+          });
         });
       }
 
-      const stackChildren = stackRef.current?.children;
-      if (stackChildren && stackChildren.length > 0) {
-        const stackArray = Array.from(stackChildren);
-        gsap.from(stackArray, {
-          scale: 0.8,
-          opacity: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: stackRef.current,
-            start: "top 80%",
+      if (stackRef.current) {
+        gsap.fromTo(
+          stackRef.current,
+          { autoAlpha: 0, scale: 0.9 },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: stackRef.current,
+              start: "top 85%",
+              once: true
+            }
           }
-        });
+        );
       }
     }, sectionRef);
 
@@ -96,7 +111,10 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
     { name: "Jenkins", icon: Settings },
     { name: "Vagrant", icon: Box },
     { name: "Prometheus", icon: BarChart3 },
-    { name: "Grafana", icon: Activity }
+    { name: "Grafana", icon: Activity },
+    { name: "Figma", icon: Figma },
+    { name: "Canva", icon: Pen },
+    { name: "Illustrator", icon: PenToolIcon }
   ];
 
   const achievements = [
@@ -121,7 +139,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
           }`}>
             J'aide les entrepreneurs à structurer, automatiser et faire grandir leur business grâce à des solutions digitales personnalisées et des identités visuelles percutantes
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
         {/* Skills */}
@@ -130,7 +148,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
             <div key={index} className={`p-6 rounded-xl text-center shadow-lg transition-all duration-300 hover:shadow-xl ${
               isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white'
             }`}>
-              <div className="w-16 h-16 bg-gradient-to-br from-[#19a89e] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#19a89e] rounded-full flex items-center justify-center mx-auto mb-4">
                 <skill.icon className="text-white" size={32} />
               </div>
               <h3 className={`text-xl font-semibold mb-2 ${
@@ -162,40 +180,6 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
                 <tech.icon size={16} className="text-[#19a89e]" />
                 <span>{tech.name}</span>
               </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Achievements */}
-        <div>
-          <h3 className={`text-2xl font-bold text-center mb-8 ${
-            isDark ? 'text-white' : 'text-[#014a74]'
-          }`}>
-            Mes Réalisations
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <div key={index} className={`p-6 rounded-xl shadow-lg ${
-                isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white'
-              }`}>
-                <div className="flex items-center mb-4">
-                  <Award className="text-[#19a89e] mr-2" size={24} />
-                  <h4 className={`text-lg font-semibold ${
-                    isDark ? 'text-white' : 'text-gray-800'
-                  }`}>
-                    {achievement.category}
-                  </h4>
-                </div>
-                <ul className="space-y-2">
-                  {achievement.projects.map((project, projectIndex) => (
-                    <li key={projectIndex} className={`text-sm ${
-                      isDark ? 'text-gray-300' : 'text-gray-600'
-                    }`}>
-                      • {project}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             ))}
           </div>
         </div>

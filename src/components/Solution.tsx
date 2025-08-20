@@ -9,46 +9,61 @@ interface SolutionProps {
 
 const Solution: React.FC<SolutionProps> = ({ isDark }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const benefitsRef = useRef<HTMLDivElement>(null);
+  const problemsRef = useRef<HTMLDivElement>(null);
   const guaranteeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
-      const children = benefitsRef.current?.children;
-      if (children && children.length > 0) {
-        const childArray = Array.from(children);
-        gsap.from(childArray, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          }
+      if (problemsRef.current) {
+        const cards = Array.from(problemsRef.current.children);
+        gsap.set(cards, { autoAlpha: 0, y: 40 });
+
+        cards.forEach((card, index) => {
+          ScrollTrigger.create({
+            trigger: card,
+            start: "top 85%",
+            onEnter: () => {
+              gsap.to(card, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.6,
+                delay: index * 0.08,
+                ease: "power3.out"
+              });
+            },
+            once: true
+          });
         });
       }
 
-      gsap.from(guaranteeRef.current, {
-        scale: 0.8,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: guaranteeRef.current,
-          start: "top 80%",
-        }
-      });
+      if (guaranteeRef.current) {
+        gsap.fromTo(
+          guaranteeRef.current,
+          { autoAlpha: 0, scale: 0.9 },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: guaranteeRef.current,
+              start: "top 85%",
+              once: true
+            }
+          }
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
-  const benefits = [
+  const problems = [
     {
       icon: Rocket,
-      title: "Une version MVP de ton application, livrée en 15 jours",
+      title: "Une version MVP de ton application, livrée en 21 jours",
       description: "Assez de fonctionnalités pour attirer tes premiers utilisateurs, valider ton idée et commencer à générer des revenus."
     },
     {
@@ -89,28 +104,28 @@ const Solution: React.FC<SolutionProps> = ({ isDark }) => {
           }`}>
             Ce que tu obtiens concrètement :
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
-        <div ref={benefitsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {benefits.map((benefit, index) => (
-            <div key={index} className={`p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
+        <div ref={problemsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          {problems.map((problem, index) => (
+            <div key={index} className={`problem-card p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
               isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white'
             }`}>
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#19a89e] to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <benefit.icon className="text-white" size={24} />
+                <div className="w-12 h-12 bg-[#19a89e] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <problem.icon className="text-white" size={24} />
                 </div>
                 <div>
                   <h3 className={`text-lg font-semibold mb-2 ${
                     isDark ? 'text-white' : 'text-gray-800'
                   }`}>
-                    {benefit.title}
+                    {problem.title}
                   </h3>
                   <p className={`text-sm ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    {benefit.description}
+                    {problem.description}
                   </p>
                 </div>
               </div>
@@ -137,7 +152,7 @@ const Solution: React.FC<SolutionProps> = ({ isDark }) => {
           }`}>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#19a89e] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="text-white" size={32} />
                 </div>
                 <h4 className={`text-xl font-semibold mb-2 ${
@@ -152,7 +167,7 @@ const Solution: React.FC<SolutionProps> = ({ isDark }) => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#19a89e] rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="text-white" size={32} />
                 </div>
                 <h4 className={`text-xl font-semibold mb-2 ${

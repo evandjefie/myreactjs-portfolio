@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#19a89e] rounded-lg flex items-center justify-center">
               <Code className="text-white" size={24} />
             </div>
             <span className={`text-xl font-bold ${

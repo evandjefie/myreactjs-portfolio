@@ -39,7 +39,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
           }`}>
             Prix exceptionnel
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
         <div ref={pricingRef} className="max-w-2xl mx-auto">
@@ -55,40 +55,62 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
 
             <div className="text-center">
               <div className="mb-8">
-                <div className="flex items-center justify-center mb-4">
+                <p className="text-green-500 font-semibold text-lg">
+                  À partir de
+                </p>                
+                <div className="flex items-end justify-center">
                   <span className={`text-6xl font-bold ${
                     isDark ? 'text-white' : 'text-[#014a74]'
                   }`}>
-                    150 000
+                    299
                   </span>
-                  <span className={`text-2xl ml-2 ${
+                  <span className={`mb-5 text-2xl ml-2 ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    Fcfa
+                    $
                   </span>
                 </div>
-                <div className="flex items-center justify-center space-x-4 mb-4">
-                  <span className={`text-2xl line-through ${
-                    isDark ? 'text-gray-500' : 'text-gray-400'
+                <div className="flex items-center justify-center space-x-4">
+                  <span className={`text-md ml-2 mb-4 ${
+                    isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    750 000 Fcfa
+                    ~= 160.000 Fcfa
+                  </span>
+                </div>
+                <div className="flex items-center justify-center space-x-4">
+                  <span className={`text-3xl line-through ${
+                    isDark ? 'text-red-500' : 'text-red-400'
+                  }`}>
+                    1999 $
                   </span>
                   <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     -80%
                   </span>
                 </div>
+                <div className="flex items-center justify-center space-x-4">
+                  <span className={`text-md ml-2 mb-4 ${
+                    isDark ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                    ~= 1.100.000 Fcfa
+                  </span>
+                </div>
+                  {/* <span className={`text-md ml-2 mb-4 ${
+                    isDark ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                    ~= 160.000 Fcfa
+                  </span> */}
                 <p className="text-green-500 font-semibold text-lg">
                   Une économie de 600 000 Fcfa !
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="flex items-center justify-center md:grid-cols-3 gap-4 mb-8">
                 <div className="flex items-center space-x-2">
                   <Clock className="text-[#19a89e]" size={20} />
                   <span className={`text-sm ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    Livraison 15 jours
+                    Livraison 21 jours
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -124,9 +146,17 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                 </p>
               </div>
 
-              <button className="w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              {/* <button className="w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a href="https://take.app/fr/edjverse/p/cmd4ls97d002ric04rjcxl14n">
                 Réserver Ma Place Maintenant
-              </button>
+                </a>
+              </button> */}
+              <a 
+                href="https://take.app/fr/edjverse/p/cmd4ls97d002ric04rjcxl14n"
+                className='w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+              >
+                Réserver Ma Place Maintenant
+              </a>
             </div>
           </div>
         </div>

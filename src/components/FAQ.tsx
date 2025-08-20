@@ -40,24 +40,22 @@ const FAQ: React.FC<FAQProps> = ({ isDark }) => {
       answer: "Un MVP (Minimum Viable Product) est une version simplifiée de votre application qui contient uniquement les fonctionnalités essentielles. C'est parfait pour tester votre idée sur le marché, attirer vos premiers utilisateurs et valider votre concept avant d'investir dans une version complète."
     },
     {
-      question: "15 jours, c'est vraiment possible ?",
-      answer: "Absolument ! Grâce à ma méthodologie éprouvée et mon expérience, je peux livrer un MVP fonctionnel en 15 jours. Je me concentre sur les fonctionnalités core de votre application en utilisant des technologies modernes et efficaces comme React, Flutter et Supabase."
+      question: "21 jours, c'est vraiment possible ?",
+      answer: "Oui, nous pouvons livrer un MVP fonctionnel en 21 jours.Notre méthode se base sur trois principes clés :\nVibecoding : Utiliser des outils d'IA pour accélérer le codage et le prototypage.\nTechnologies performantes : Travailler avec des frameworks comme React, Flutter et Supabase pour construire des applications solides.\nFocus sur le produit : Se concentrer uniquement sur les fonctionnalités essentielles pour résoudre le problème de vos utilisateurs."
+      // answer: "Oui, c'est tout à fait possible. Grâce à une méthodologie très ciblée et à l'utilisation d'outils de développement modernes, nous sommes en mesure de concevoir et de livrer un MVP (Minimum Viable Product) fonctionnel en 21 jours.\nNotre approche repose sur trois piliers :\nLe \"Vibecoding\" : Nous utilisons des outils basés sur l'intelligence artificielle qui accélèrent la génération de code et le prototypage, tout en gardant une vue et un contrôle sur l'ensemble de la structure de l'application.\nTechnologies performantes : Nous nous appuyons sur des frameworks et services de pointe comme React, Flutter et Supabase. Ces technologies nous permettent de construire rapidement des applications robustes et évolutives, en nous concentrant uniquement sur ce qui apporte de la valeur à vos utilisateurs.\nFocus sur le cœur du produit : La clé est de se concentrer exclusivement sur les fonctionnalités essentielles qui résolvent le problème principal de votre public cible. Cette approche nous permet d'éviter les fonctionnalités superflues et de garantir une livraison rapide et efficace."
+      // answer: "Absolument ! Grâce à ma méthodologie éprouvée et mon expérience, je peux livrer un MVP fonctionnel en 21 jours. Je me concentre sur les fonctionnalités core de votre application en utilisant des technologies modernes et efficaces comme React, Flutter et Supabase mais surtout une approche vibecoding avec une vue sur le code."
+    },
+    {
+      question: "Le vibecoding, c’est génial pour aller vite... mais les bugs et failles, on en fait quoi ?",
+      answer: "Effectivement ! Le vibecoding permet de livrer rapidement, mais je m'assure que votre MVP est robuste et sécurisé. Je teste chaque fonctionnalité en profondeur avant la livraison et vous bénéficiez d'un mois d'assistance gratuite pour corriger les éventuels bugs et ajuster les fonctionnalités si nécessaire."
     },
     {
       question: "Que se passe-t-il si je ne suis pas satisfait ?",
       answer: "Votre satisfaction est ma priorité. Si vous n'êtes pas satisfait du résultat, nous en discutons et je m'engage à faire les ajustements nécessaires. Mon objectif est que vous soyez fier de votre application et qu'elle réponde parfaitement à vos attentes."
     },
     {
-      question: "L'application sera-t-elle responsive ?",
-      answer: "Bien sûr ! Toutes mes applications sont conçues pour être parfaitement adaptées à tous les appareils : ordinateurs, tablettes et smartphones. Votre application offrira une expérience utilisateur optimale sur tous les écrans."
-    },
-    {
       question: "Puis-je faire évoluer mon MVP plus tard ?",
       answer: "Absolument ! Le MVP est conçu comme une base solide et évolutive. Une fois votre concept validé, nous pouvons facilement ajouter de nouvelles fonctionnalités, améliorer le design ou intégrer de nouveaux services selon vos besoins."
-    },
-    {
-      question: "Quelles technologies utilisez-vous ?",
-      answer: "J'utilise des technologies modernes et éprouvées : Flutter pour les apps mobiles, React.js pour le web, Supabase pour la base de données, Django/Laravel pour le backend si nécessaire. Toutes ces technologies garantissent performance, sécurité et évolutivité."
     },
     {
       question: "L'assistance d'1 mois inclut quoi exactement ?",
@@ -65,7 +63,7 @@ const FAQ: React.FC<FAQProps> = ({ isDark }) => {
     },
     {
       question: "Comment se déroule le processus de développement ?",
-      answer: "C'est très simple : 1) Vous me transmettez votre idée et vos besoins, 2) Je crée un cahier des charges détaillé, 3) Je développe votre MVP en 15 jours avec des points réguliers, 4) Je livre votre application et vous accompagne pendant 1 mois."
+      answer: "C'est très simple : 1) Vous me transmettez votre idée et vos besoins, 2) Je crée un cahier des charges détaillé, 3) Je développe votre MVP en 21 jours avec des points réguliers, 4) Je livre votre application et vous accompagne pendant 1 mois."
     },
     {
       question: "Pourquoi seulement 3 clients par mois ?",
@@ -97,7 +95,7 @@ const FAQ: React.FC<FAQProps> = ({ isDark }) => {
           }`}>
             Toutes les réponses à vos questions sur la création de votre MVP
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
         <div ref={faqRef} className="max-w-4xl mx-auto">
@@ -112,7 +110,7 @@ const FAQ: React.FC<FAQProps> = ({ isDark }) => {
                 }`}
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-[#19a89e] to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#19a89e] rounded-lg flex items-center justify-center flex-shrink-0">
                     <HelpCircle className="text-white" size={20} />
                   </div>
                   <h3 className={`text-lg font-semibold ${

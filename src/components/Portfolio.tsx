@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ExternalLink, Code, Palette, Server, FileText, Zap, Scale, Wrench } from 'lucide-react';
+import { ExternalLink, Palette, FileText, Zap, Scale, Wrench } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -12,21 +12,30 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
   const projectsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
       const children = projectsRef.current?.children;
       if (children && children.length > 0) {
         const childArray = Array.from(children);
-        gsap.from(childArray, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
+        gsap.set(childArray, { autoAlpha: 0, y: 40 });
+
+        gsap.fromTo(
+          childArray,
+          { autoAlpha: 0, y: 40 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: projectsRef.current,
+              start: "top 85%",
+              once: true
+            }
           }
-        });
+        );
       }
     }, sectionRef);
 
@@ -40,31 +49,35 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
       type: "dev",
       icon: FileText,
       description: "Application web complète pour la génération et gestion de devis et factures",
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:""
     },
     {
-      title: "Tchamsai",
+      title: "TchamsAi",
       category: "Générateur de contenu intelligent en marketing",
       type: "dev",
       icon: Zap,
-      description: "Générateur de contenu intelligent spécialisé en marketing digital",
-      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Générateur de contenu intelligent spécialisé en marketing digital basé sur Gemini et conçu avec Lovable (React, Supabase)",
+      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:"https://tchamsai.evanform.com"
     },
     {
-      title: "Yuconsult",
-      category: "Assistant IA spécialisé en droit ivoirien et ohada",
+      title: "YuconsultJuris",
+      category: "Assistant IA spécialisé en droit ivoirien et OHADA",
       type: "dev",
       icon: Scale,
-      description: "Assistant IA spécialisé en droit ivoirien et ohada pour consultations juridiques",
-      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Assistant IA spécialisé en droit ivoirien et OHADA pour consultations juridiques",
+      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:"https://yuconsultjuris.com/"
     },
     {
-      title: "Barakoo Mobile App",
+      title: "Barakoo",
       category: "App mobile de mise en relation entre client et artisan",
       type: "dev",
       icon: Wrench,
       description: "App mobile de mise en relation entre client et artisan (electricien, peintre, frigoriste, plombier, etc)",
-      image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:""
     },
     {
       title: "Edjverse",
@@ -72,7 +85,26 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
       type: "design",
       icon: Palette,
       description: "Création d'identité visuelle complète",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: ""
+    },
+    {
+      title: "Hossaman Service",
+      category: "Identité Visuelle",
+      type: "design",
+      icon: Palette,
+      description: "Création d'identité visuelle complète pour une structure fournissant du personnel pour les services à domicile et en entreprise tel que le nettoyage, l la cuisine, l'assistance aux personnes agées et tout-petit (nounous), etc...",
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: "https://www.behance.net/gallery/232935869/HOSSAMAN-SERVICES-Identit-Visuelle"
+    },
+    {
+      title: "CeZo app",
+      category: "Identité Visuelle",
+      type: "design",
+      icon: Palette,
+      description: "Création d'identité visuelle complète pour une structure fournissant du personnel pour les services à domicile et en entreprise tel que le nettoyage, l la cuisine, l'assistance aux personnes agées et tout-petit (nounous), etc...",
+      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: "https://www.behance.net/gallery/231540077/CeZo-Cleaning-Visual-identity"
     },
     {
       title: "IBH",
@@ -80,7 +112,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
       type: "design",
       icon: Palette,
       description: "Branding et identité visuelle d'entreprise",
-      image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600",
+      // image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url: "https://www.behance.net/gallery/219940935/IBH-Brand-guidelines/modules/1254051225"
     }
   ];
 
@@ -113,7 +147,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
           }`}>
             Découvrez quelques projets que j'ai réalisés pour mes clients
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
         <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -129,9 +163,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 left-4">
-                  <div className={`w-10 h-10 bg-gradient-to-r ${getTypeColor(project.type)} rounded-lg flex items-center justify-center`}>
+                  {/* <div className={`w-10 h-10 bg-[#19a89e] ${getTypeColor(project.type)} rounded-lg flex items-center justify-center`}>
                     <project.icon className="text-white" size={20} />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="absolute bottom-4 left-4">
                   <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
@@ -151,8 +185,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
                   {project.description}
                 </p>
                 <button className="flex items-center space-x-2 text-[#19a89e] hover:text-[#16968c] transition-colors">
-                  <span className="text-sm font-medium">Voir le projet</span>
-                  <ExternalLink size={16} />
+                  <a href={`flex ${project.url}`}>
+                    <span className="text-sm font-medium">
+                      Voir le projet
+                    <ExternalLink size={16} />
+                    </span>                  
+                  </a>
                 </button>
               </div>
             </div>

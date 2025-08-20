@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
             }`}
           >
             CRÉE ENFIN TON{' '}
-            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-[#19a89e] bg-clip-text text-transparent">
               APPLICATION INNOVANTE
             </span>
           </h1>
@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               isDark ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            VERSION EXPRESS EN 15 JOURS
+            VERSION EXPRESS EN 21 jourS
           </p>
 
           <div ref={ctaRef} className="space-y-6">
@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Clock className="text-green-500" size={20} />
-                <span className={isDark ? 'text-white' : 'text-gray-800'}>15 Jours</span>
+                <span className={isDark ? 'text-white' : 'text-gray-800'}>21 jours</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Trophy className="text-orange-500" size={20} />

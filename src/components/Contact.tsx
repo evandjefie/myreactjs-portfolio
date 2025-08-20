@@ -45,7 +45,7 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
           }`}>
             Contacte-moi dès maintenant pour discuter de ton idée et réserver ta place
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"</div>
+          <div className="w-20 h-1 bg-[#19a89e] mx-auto rounded-full"></div>
         </div>
 
         <div ref={formRef} className="max-w-4xl mx-auto">
@@ -59,7 +59,7 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#19a89e] rounded-lg flex items-center justify-center">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
@@ -76,7 +76,7 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#19a89e] rounded-lg flex items-center justify-center">
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
@@ -88,12 +88,12 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                     <p className={`${
                       isDark ? 'text-gray-300' : 'text-gray-600'
                     }`}>
-                      +237 6XX XXX XXX
+                      +225 0160125373
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-[#19a89e] to-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#19a89e] rounded-lg flex items-center justify-center">
                     <MapPin className="text-white" size={24} />
                   </div>
                   <div>
@@ -105,7 +105,7 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                     <p className={`${
                       isDark ? 'text-gray-300' : 'text-gray-600'
                     }`}>
-                      Abidjan, Deux-plateau, Les Perles
+                      Abidjan, Deux-plateaux, Les Perles
                     </p>
                   </div>
                 </div>
@@ -200,5 +200,36 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                       Autres Services
                     </h3>
                     <div className="space-y-4">
-                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfA0vBEUVYVcCg9gN06_ikYLY2JuS3REQI4hbmpQNFzPJdSgg">Hello Lien</a>
+                                            <a 
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfA0vBEUVYVcCg9gN06_ikYLY2JuS3REQI4hbmpQNFzPJdSgg" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-center justify-between p-4 rounded-lg border transition-all ${
+                          isDark 
+                            ? 'bg-gray-700 border-gray-600 hover:bg-gray-600' 
+                            : 'bg-white border-gray-200 hover:bg-gray-50'
+                        }`}
+                      >
+                        <div>
+                          <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-800'}`}>
+                            Formulaire de contact
+                          </h4>
+                          <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                            Remplissez notre formulaire détaillé
+                          </p>
                         </div>
+                        <ExternalLink className={isDark ? 'text-white' : 'text-gray-800'} size={20} />
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
