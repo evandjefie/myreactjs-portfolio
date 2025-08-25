@@ -184,13 +184,21 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
                         placeholder="Explique-moi ton idée d'application en quelques lignes..."
                       ></textarea>
                     </div>
-                    <button
-                      type="submit"
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const name = (document.querySelector('input[type="text"]') as HTMLInputElement)?.value || '';
+                        const email = (document.querySelector('input[type="email"]') as HTMLInputElement)?.value || '';
+                        const message = (document.querySelector('textarea') as HTMLTextAreaElement)?.value || '';
+                        const whatsappMessage = `Bonjour, je suis *${name}*%0A%0AMon email: ${email}%0A%0AMon projet: ${message}`;
+                        window.open(`https://wa.me/2250160125373?text=${whatsappMessage}`, '_blank');
+                      }}
                       className="w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                     >
-                      <span>Envoyer ma demande</span>
+                      <span>Je réserve maintenant</span>
                       <Send size={20} />
-                    </button>
+                    </a>
                   </form>
                 ) : (
                   <div className="space-y-3">

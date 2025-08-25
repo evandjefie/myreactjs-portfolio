@@ -48,7 +48,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
           }`}>
             {/* Badge */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+              <div className="bg-red-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                 OFFRE LIMITÉE
               </div>
             </div>
@@ -71,7 +71,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center space-x-4">
-                  <span className={`text-md ml-2 mb-4 ${
+                  <span className={`text-sm ml-2 mb-4 ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     ~= 160.000 Fcfa
@@ -88,20 +88,27 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                   </span>
                 </div>
                 <div className="flex items-center justify-center space-x-4">
-                  <span className={`text-md ml-2 mb-4 ${
+                  <span className={`text-sm ml-2 mb-4 ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     ~= 1.100.000 Fcfa
                   </span>
                 </div>
-                  {/* <span className={`text-md ml-2 mb-4 ${
+                  {/* <span className={`text-sm ml-2 mb-4 ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     ~= 160.000 Fcfa
                   </span> */}
                 <p className="text-green-500 font-semibold text-lg">
-                  Une économie de 600 000 Fcfa !
+                  Une économie de 1 700 $ !
                 </p>
+                <div className="flex items-center justify-center space-x-4">
+                  <span className={`text-sm ml-2 ${
+                    isDark ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                    ~= 940 000 Fcfa
+                  </span>
+                </div>
               </div>
 
               <div className="flex items-center justify-center md:grid-cols-3 gap-4 mb-8">
@@ -152,7 +159,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                 </a>
               </button> */}
               <a 
-                href="https://take.app/fr/edjverse/p/cmd4ls97d002ric04rjcxl14n"
+                href="#contact"
                 className='w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
               >
                 Réserver Ma Place Maintenant

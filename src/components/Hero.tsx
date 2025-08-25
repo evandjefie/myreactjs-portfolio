@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className={`min-h-screen flex items-center justify-center relative overflow-hidden ${
+    <section id="hero" ref={heroRef} className={`min-h-screen p-24 flex items-center justify-center relative overflow-hidden ${
       isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 to-purple-50'
     }`}>
       {/* Background decoration */}
@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               isDark ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            VERSION EXPRESS EN 21 jourS
+            VERSION EXPRESS EN 21 jours
           </p>
 
           <div ref={ctaRef} className="space-y-6">
@@ -99,6 +99,18 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               }`}>
                 <a href="#portfolio">Voir les Réalisations</a>
               </button>
+            </div>
+            {/* Video Section */}
+            <div className="py-12 max-w-5xl mx-auto">
+              <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-2xl">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/00IksFTSGEs?si=TxG0tFYdndvuSwWz&amp;start=5"
+                  title="Présentation"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
