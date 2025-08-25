@@ -44,17 +44,17 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
 
   const projects = [
     {
-      title: "Mafaci",
-      category: "App web pour Generer et gerer devis et facture",
+      title: "IALONNI",
+      category: "Site web",
       type: "dev",
       icon: FileText,
-      description: "Application web complète pour la génération et gestion de devis et factures",
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
-      url:""
-    },
+      description: "Site vitrine d'une agence spécialisée en solutions d'intelligence artificielle",
+      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+      url:"https://ialonni.com"
+    },    
     {
       title: "TchamsAi",
-      category: "Générateur de contenu intelligent en marketing",
+      category: "App web",
       type: "dev",
       icon: Zap,
       description: "Générateur de contenu intelligent spécialisé en marketing digital basé sur Gemini et conçu avec Lovable (React, Supabase)",
@@ -63,30 +63,39 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
     },
     {
       title: "YuconsultJuris",
-      category: "Assistant IA spécialisé en droit ivoirien et OHADA",
+      category: "Site web",
       type: "dev",
       icon: Scale,
       description: "Assistant IA spécialisé en droit ivoirien et OHADA pour consultations juridiques",
-      image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://images.pexels.com/photos/8112172/pexels-photo-8112172.jpeg?auto=compress&cs=tinysrgb&w=600",
       url:"https://yuconsultjuris.com/"
     },
     {
       title: "Barakoo",
-      category: "App mobile de mise en relation entre client et artisan",
+      category: "App web & mobile",
       type: "dev",
       icon: Wrench,
-      description: "App mobile de mise en relation entre client et artisan (electricien, peintre, frigoriste, plombier, etc)",
-      image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
-      url:""
+      description: "App web & mobile de mise en relation entre client et artisan (electricien, peintre, frigoriste, plombier, etc)",
+      image: "https://images.pexels.com/photos/8486929/pexels-photo-8486929.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:"https://barakoo.ialonni.com"
     },
+    {
+      title: "Mafaci",
+      category: "App web",
+      type: "dev",
+      icon: FileText,
+      description: "Application web complète pour la génération et la gestion des devis et factures",
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
+      url:"https://mafaci.evanform.com"
+    },    
     {
       title: "Edjverse",
       category: "Identité Visuelle",
       type: "design",
       icon: Palette,
       description: "Création d'identité visuelle complète",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
-      url: ""
+      image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/4938fc209509443.6700a46591778.png",
+      url: "https://www.behance.net/gallery/209509443/EDJVERSE-Identit-Visuelle"
     },
     {
       title: "Hossaman Service",
@@ -94,7 +103,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
       type: "design",
       icon: Palette,
       description: "Création d'identité visuelle complète pour une structure fournissant du personnel pour les services à domicile et en entreprise tel que le nettoyage, l la cuisine, l'assistance aux personnes agées et tout-petit (nounous), etc...",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "https://mir-s3-cdn-cf.behance.net/projects/max_808/2c70f0232935869.Y3JvcCwxMDgwLDg0NCwwLDExNw.png",
       url: "https://www.behance.net/gallery/232935869/HOSSAMAN-SERVICES-Identit-Visuelle"
     },
     {
@@ -102,19 +111,28 @@ const Portfolio: React.FC<PortfolioProps> = ({ isDark }) => {
       category: "Identité Visuelle",
       type: "design",
       icon: Palette,
-      description: "Création d'identité visuelle complète pour une structure fournissant du personnel pour les services à domicile et en entreprise tel que le nettoyage, l la cuisine, l'assistance aux personnes agées et tout-petit (nounous), etc...",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Création d'identité visuelle complète pour une application web qui permet de gamifier le nettoyage des lieux de vie. L’utilisateur prend des photos avant/après ou filme ses actions (balayage, ramassage de déchets). L’IA vérifie l’effort réel et attribue un score. Les scores cumulés donnent accès à des bonus : Mo internet, crédit d\’appel, bons de réduction.",
+      image: "https://mir-s3-cdn-cf.behance.net/projects/max_808/ee6ea7231540077.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
       url: "https://www.behance.net/gallery/231540077/CeZo-Cleaning-Visual-identity"
+    },
+    {
+      title: "For You Brand",
+      category: "Identité Visuelle",
+      type: "design",
+      icon: Palette,
+      description: "Création d'identité visuelle complète pour une styliste modéliste.",
+      image: "https://mir-s3-cdn-cf.behance.net/projects/max_808/add2e3208994969.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
+      url: "https://www.behance.net/gallery/208994969/FYB-Identit-Visuelle"
     },
     {
       title: "IBH",
       category: "Identité Visuelle",
       type: "design",
       icon: Palette,
-      description: "Branding et identité visuelle d'entreprise",
-      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=600",
-      // image: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600",
-      url: "https://www.behance.net/gallery/219940935/IBH-Brand-guidelines/modules/1254051225"
+      description: "Branding et identité visuelle d'une app de composition musicale basée sur l'IA",
+      image: "https://mir-s3-cdn-cf.behance.net/project_modules/max_316/c7b33c219940935.67bdfacb79cd0.png",
+      // image: "https://mir-s3-cdn-cf.behance.net/projects/max_808/add2e3208994969.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
+      url: "https://www.behance.net/gallery/219940935/IBH-Brand-guidelines"
     }
   ];
 

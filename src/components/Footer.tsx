@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ isDark }) => {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 text-gray-400">
                 <Phone size={16} />
-                <span className="text-sm">+237 6XX XXX XXX</span>
+                <span className="text-sm">+225 01 60 12 53 73</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-400">
                 <MapPin size={16} />

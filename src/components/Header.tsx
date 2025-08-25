@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
     { label: 'Accueil', href: '#hero' },
     { label: 'À propos', href: '#about' },
     { label: 'Réalisations', href: '#portfolio' },
+    { label: 'Formations', href: 'https://store.evanform.com/' },
     { label: 'Contact', href: '#contact' },
   ];
 
