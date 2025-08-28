@@ -130,7 +130,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           {/* Photo Section */}
-          <div className="mb-8 relative mx-auto" style={{ width: '240px', height: '360px' }}>
+          <div className="mb-8 relative mx-auto" style={{ width: '340px', height: '360px' }}>
             <div className={`absolute inset-0 rounded-2xl ${
               isDark ? 'bg-gradient-to-r from-[#19a89e] to-blue-500' : 'bg-gradient-to-r from-[#19a89e] to-blue-500'
             }`} style={{ transform: 'rotate(-3deg)' }}></div>
@@ -138,7 +138,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
               isDark ? 'border-gray-800' : 'border-white'
             }`}>
               <img
-                src="/src/assets/evandjefie.jpg"
+                src="/evandjefie_fb_new.png"
                 alt="Evans DJEFIE"
                 className="w-full h-full object-cover"
               />
