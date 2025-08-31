@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className={`min-h-screen p-24 flex items-center justify-center relative overflow-hidden ${
+    <section id="hero" ref={heroRef} className={`min-h-screen pt-16 flex items-center justify-center relative overflow-hidden ${
       isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 to-purple-50'
     }`}>
       {/* Background decoration */}

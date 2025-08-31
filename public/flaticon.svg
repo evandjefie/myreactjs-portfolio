@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Calque_2" data-name="Calque 2" viewBox="0 0 354.39 226.49" width="354.3900146484375" height="226.49000549316406">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 20px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        stroke: #104775;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 15px;
+      }
+
+      .cls-3 {
+        stroke: #00a79d;
+      }
+
+      .cls-5 {
+        fill: #19a89e;
+      }
+
+      .cls-4 {
+        stroke-width: 4px;
+      }
+    </style>
+    <symbol id="edjverse_icon" viewBox="0 0 354.39 226.49">
+      <g>
+        <path class="cls-5" d="m17.69,119.57c5.19.03,10.38.09,15.57.08,1.26,0,2.22.28,3.19,1.2,10.87,10.33,23.72,16.57,38.62,18.54,13.23,1.75,25.95-.11,38.07-5.66,6.93-3.17,13.25-7.31,18.69-12.68,1.07-1.05,2.15-1.42,3.61-1.4,5.11.06,10.23,0,15.34-.02.22.75.44,1.49.66,2.24-.23.32-.47.63-.7.94-1,1.13-2,2.26-2.99,3.39-13.37,15.27-30.11,24.8-50.11,27.77-29.3,4.35-54.43-4.45-75.13-25.7-1.82-1.87-3.47-3.9-5.2-5.86-.02-.34-.04-.68-.06-1.02.14-.61.29-1.21.43-1.82Z"/>
+        <circle class="cls-2" cx="84.38" cy="142.11" r="76.88"/>
+        <path class="cls-1" d="m317.08,226.48V67.58v158.9Z"/>
+        <circle class="cls-4" cx="239.31" cy="141.64" r="69.5"/>
+        <circle class="cls-2" cx="239.36" cy="142.11" r="76.88"/>
+        <circle class="cls-3" cx="317.3" cy="37.09" r="29.59"/>
+      </g>
+    </symbol>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <use width="354.39" height="226.49" xlink:href="#edjverse_icon"/>
+  </g>
+</svg>
