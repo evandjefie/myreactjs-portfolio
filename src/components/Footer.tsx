@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ isDark }) => {
   return (
-    <footer className={`py-12 ${
+    <footer className={`xl:px-8 py-12 ${
       isDark ? 'bg-gray-900 border-t border-gray-700' : 'bg-gray-900 text-white'
     }`}>
       <div className="container mx-auto px-4">

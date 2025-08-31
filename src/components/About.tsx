@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { 
   Code, 
   Palette, 
@@ -20,9 +20,11 @@ import {
   Figma,
   PenToolIcon,
   Pen
+  , ExternalLink, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ServiceCarousel from './ServiceCarousel';
 
 interface AboutProps {
   isDark: boolean;
@@ -91,7 +93,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
     {
       icon: Palette,
       title: "Designer",
-      description: "Interfaces utilisateur modernes et identités visuelles"
+      description: "Identités visuelles"
     },
     {
       icon: Server,
@@ -181,7 +183,7 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
           ))}
         </div>
 
-        {/* Tech Stack */}
+  {/* Tech Stack */}
         <div className="mb-16">
           <h3 className={`text-2xl font-bold text-center mb-8 ${
             isDark ? 'text-white' : 'text-[#014a74]'
@@ -199,6 +201,14 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
             ))}
           </div>
         </div>
+
+        {/* Autres Services Carousel (moved from Contact) */}
+        {/* <div className="mb-16">
+          <h3 className={`text-2xl font-bold text-center mb-8 ${isDark ? 'text-white' : 'text-[#014a74]'}`}>
+            Autres Services
+          </h3>
+          <ServiceCarousel isDark={isDark} />
+        </div> */}
       </div>
     </section>
   );

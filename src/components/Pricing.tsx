@@ -160,7 +160,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
               </button> */}
               <a 
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0U8bopkl-f_chXXiEmK2SAf6qH1E1O9JZN-rhenPk48HMHIz0xzx_cJa5Aff_UQgNODlF02E0a"
-                className='w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+                className='bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center'
               >
                 Réserver Ma Place Maintenant
               </a>

@@ -122,3 +122,19 @@ a:focus {
     display: none !important;
   }
 }
+
+/* Carousel helpers */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+.snap-center > * {
+  scroll-snap-align: center;
+}

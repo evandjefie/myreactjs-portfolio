@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
   ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+    <header className={`fixed w-full xl:px-8 top-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? isDark 
           ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' 
