@@ -63,7 +63,7 @@ const Solution: React.FC<SolutionProps> = ({ isDark }) => {
   const problems = [
     {
       icon: Rocket,
-      title: "Une version MVP de ton application, livrée en 21 jours",
+      title: "Une version MVP de ton application, livrée en 31 jours",
       description: "Assez de fonctionnalités pour attirer tes premiers utilisateurs, valider ton idée et commencer à générer des revenus."
     },
     {

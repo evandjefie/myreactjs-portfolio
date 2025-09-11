@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className={`min-h-screen p-24 flex items-center justify-center relative overflow-hidden ${
+    <section id="hero" ref={heroRef} className={`min-h-screen pt-16 flex items-center justify-center relative overflow-hidden ${
       isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 to-purple-50'
     }`}>
       {/* Background decoration */}
@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               isDark ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            VERSION EXPRESS EN 21 jours
+            VERSION EXPRESS EN 31 jours
           </p>
 
           <div ref={ctaRef} className="space-y-6">
@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Clock className="text-green-500" size={20} />
-                <span className={isDark ? 'text-white' : 'text-gray-800'}>21 jours</span>
+                <span className={isDark ? 'text-white' : 'text-gray-800'}>31 jours</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Trophy className="text-orange-500" size={20} />

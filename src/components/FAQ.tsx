@@ -35,45 +35,47 @@ const FAQ: React.FC<FAQProps> = ({ isDark }) => {
   }, []);
 
   const faqs = [
-    {
-      question: "Qu'est-ce qu'un MVP exactement ?",
-      answer: "Un MVP (Minimum Viable Product) est une version simplifiée de votre application qui contient uniquement les fonctionnalités essentielles. C'est parfait pour tester votre idée sur le marché, attirer vos premiers utilisateurs et valider votre concept avant d'investir dans une version complète."
-    },
-    {
-      question: "21 jours, c'est vraiment possible ?",
-      answer: "Oui, nous pouvons livrer un MVP fonctionnel en 21 jours.Notre méthode se base sur trois principes clés :\nVibecoding : Utiliser des outils d'IA pour accélérer le codage et le prototypage.\nTechnologies performantes : Travailler avec des frameworks comme React, Flutter et Supabase pour construire des applications solides.\nFocus sur le produit : Se concentrer uniquement sur les fonctionnalités essentielles pour résoudre le problème de vos utilisateurs."
-      // answer: "Oui, c'est tout à fait possible. Grâce à une méthodologie très ciblée et à l'utilisation d'outils de développement modernes, nous sommes en mesure de concevoir et de livrer un MVP (Minimum Viable Product) fonctionnel en 21 jours.\nNotre approche repose sur trois piliers :\nLe \"Vibecoding\" : Nous utilisons des outils basés sur l'intelligence artificielle qui accélèrent la génération de code et le prototypage, tout en gardant une vue et un contrôle sur l'ensemble de la structure de l'application.\nTechnologies performantes : Nous nous appuyons sur des frameworks et services de pointe comme React, Flutter et Supabase. Ces technologies nous permettent de construire rapidement des applications robustes et évolutives, en nous concentrant uniquement sur ce qui apporte de la valeur à vos utilisateurs.\nFocus sur le cœur du produit : La clé est de se concentrer exclusivement sur les fonctionnalités essentielles qui résolvent le problème principal de votre public cible. Cette approche nous permet d'éviter les fonctionnalités superflues et de garantir une livraison rapide et efficace."
-      // answer: "Absolument ! Grâce à ma méthodologie éprouvée et mon expérience, je peux livrer un MVP fonctionnel en 21 jours. Je me concentre sur les fonctionnalités core de votre application en utilisant des technologies modernes et efficaces comme React, Flutter et Supabase mais surtout une approche vibecoding avec une vue sur le code."
-    },
-    {
-      question: "Le vibecoding, c’est génial pour aller vite... mais les bugs et failles, on en fait quoi ?",
-      answer: "Effectivement ! Le vibecoding permet de livrer rapidement, mais je m'assure que votre MVP est robuste et sécurisé. Je teste chaque fonctionnalité en profondeur avant la livraison et vous bénéficiez d'un mois d'assistance gratuite pour corriger les éventuels bugs et ajuster les fonctionnalités si nécessaire."
-    },
-    {
-      question: "Que se passe-t-il si je ne suis pas satisfait ?",
-      answer: "Votre satisfaction est ma priorité. Si vous n'êtes pas satisfait du résultat, nous en discutons et je m'engage à faire les ajustements nécessaires. Mon objectif est que vous soyez fier de votre application et qu'elle réponde parfaitement à vos attentes."
-    },
-    {
-      question: "Puis-je faire évoluer mon MVP plus tard ?",
-      answer: "Absolument ! Le MVP est conçu comme une base solide et évolutive. Une fois votre concept validé, nous pouvons facilement ajouter de nouvelles fonctionnalités, améliorer le design ou intégrer de nouveaux services selon vos besoins."
-    },
-    {
-      question: "L'assistance d'1 mois inclut quoi exactement ?",
-      answer: "Pendant 1 mois après la livraison, je vous accompagne gratuitement : corrections de bugs, petites modifications, aide à la mise en ligne, formation à l'utilisation, et réponses à toutes vos questions. Vous n'êtes jamais seul !"
-    },
-    {
-      question: "Comment se déroule le processus de développement ?",
-      answer: "C'est très simple : 1) Vous me transmettez votre idée et vos besoins, 2) Je crée un cahier des charges détaillé, 3) Je développe votre MVP en 21 jours avec des points réguliers, 4) Je livre votre application et vous accompagne pendant 1 mois."
-    },
-    {
-      question: "Pourquoi seulement 3 clients par mois ?",
-      answer: "Pour garantir un accompagnement de qualité et personnalisé à chaque client. Je préfère me concentrer sur quelques projets et les réussir parfaitement plutôt que de prendre trop de clients et bâcler le travail."
-    },
-    {
-      question: "Le prix inclut-il l'hébergement ?",
-      answer: "Le développement est inclus dans le prix. Pour l'hébergement, je vous aide à choisir la meilleure solution selon vos besoins (gratuite ou payante) et je m'occupe de la mise en ligne. Les frais d'hébergement restent à votre charge mais sont généralement très abordables."
-    }
-  ];
+  {
+    "question": "Qu'est‑ce qu'un MVP exactement ?",
+    "answer": "Un MVP (Minimum Viable Product) est une version simplifiée de votre application, qui contient **juste les fonctionnalités essentielles**. Le but est de tester rapidement votre idée sur le marché, d’attirer vos premiers utilisateurs, de recueillir des retours, et de valider votre concept avant d’investir dans une version complète avec toutes les fonctionnalités et finitions."
+  },
+  {
+    "question": "31 jours, c'est vraiment possible ?",
+    "answer": "Oui — mais **selon le type de projet** et sa complexité. Pour des apps relativement simples (LMS, QCM, bien‑être, suivi d’humeur, recettes, etc.), un MVP en ~31 jours est réaliste, surtout si on utilise des outils vibecoding / no‑code / low‑code. \n\nEn revanche, pour des apps plus complexes (transport avec géolocalisation temps réel, fintech avec paiement ou transferts réels, marketplace multi‑vendeurs, infrastructure lourde, forte conformité réglementaire, etc.), le délai sera **prolongé**, car ces éléments introduisent des phases supplémentaires (intégrations, sécurité, conformité, optimisation, tests poussés, etc.)."
+  },
+  {
+    "question": "Quels types d'apps nécessitent généralement plus de temps que 31 jours ?",
+    "answer": "Voici quelques exemples de projets qui dépassent souvent 30‑31 jours pour un MVP, et pourquoi :\n\n‑ **Applications de fintech / banque** : vérification KYC, sécurité des transactions, conformité légale, intégration avec des services financiers externes. \n‑ **Transport à la Uber** : géolocalisation en temps réel, suivi véhicule, matching client/conducteur, optimisation de trajet, traitement temps réel. \n‑ **Marketplace multi‑vendeurs** : gestion des profils vendeurs, catalogues multiples, paiement entre différentes parties, logistique, frais, retours. \n‑ **Applications avec infrastructure lourde / back‑end complexe** : streaming, IA fortement intégrée, données en temps réel, services à haute disponibilité, etc.\n\nCes fonctions additionnelles demandent plus de temps pour la conception, le développement, les tests, la sécurité et la mise en production."
+  },
+  {
+    "question": "Le vibecoding, c’est génial pour aller vite… mais les bugs et failles, on en fait quoi ?",
+    "answer": "Excellente question. Le vibecoding accélère fortement les phases de développement, mais il ne dispenses pas de garantir la robustesse et la sécurité. \n\nVoici ce que je fais pour minimiser les risques :\n‑ Tests unitaires et tests d’intégration dès que possible. \n‑ Phases de QA / contrôle qualité, même simples, sur les fonctionnalités essentielles. \n‑ Utilisation de composants / services éprouvés (bibliothèques, API externes fiables) pour les parties sensibles. \n‑ Si des fonctionnalités critiques (paiement, sécurité, gestion de données personnelles) sont impliquées, prévoir des audits ou validations spécifiques. \n‑ Garantie / assistance après livraison pour corriger les bugs imprévus.\n\nSi le projet est de type complexe (fintech, transport réel, etc.), j’inclus explicitement ces phases supplémentaires dans le calendrier prévu."
+  },
+  {
+    "question": "Que se passe‑t‑il si je ne suis pas satisfait ?",
+    "answer": "Votre satisfaction est ma priorité. Si le MVP ne correspond pas à vos attentes, nous en discutons ensemble, et je m’engage à faire les ajustements nécessaires (dans le cadre des fonctionnalités prévues au MVP). Si des modifications majeures ou nouvelles sont demandées, celles‑ci feront l’objet d’une estimation supplémentaire. L’objectif est toujours que vous soyez fier de votre application finale."
+  },
+  {
+    "question": "Puis‑je faire évoluer mon MVP plus tard ?",
+    "answer": "Absolument ! Le MVP est pensé comme une **base évolutive**. Après validation de l’idée, on peut ajouter de nouvelles fonctionnalités, améliorer le design, renforcer la sécurité, optimiser la performance, etc. Chaque version ultérieure part du socle déjà livré, ce qui permet de réduire la durée et le coût des évolutions."
+  },
+  {
+    "question": "L'assistance d'1 mois inclut quoi exactement ?",
+    "answer": "Durant le mois qui suit la livraison, vous bénéficiez gratuitement de : corrections de bugs liés aux fonctionnalités déjà livrées, petites modifications (dans le périmètre du MVP), aide pour la mise en ligne / publication, formation à l’utilisation de l’outil, réponses à vos questions utilisateurs. \n\nSi des besoins hors scope ou des modifications importantes apparaissent, ils seront évalués séparément."
+  },
+  {
+    "question": "Comment se déroule le processus de développement ?",
+    "answer": "Voici le déroulé typique :\n1) Vous me transmettez votre idée, vos besoins, votre public cible. \n2) On fait un cadrage / cahier des charges simplifié : quelles sont les fonctionnalités essentiels, quels sont celles qu’on pourrait repousser. \n3) On valide le design / les maquettes. \n4) Développement en mode itératif sur ~31 jours selon complexité, avec des points de contrôle réguliers. \n5) Livraison du MVP + phase de test / retour d’expérience. \n6) Assistance d’un mois pour garantir que les choses fonctionnent comme prévu.\n\nSi l’app est plus complexe, on ajoute des jalons supplémentaires pour les tests de sécurité, les intégrations externes et la conformité."
+  },
+  {
+    "question": "Combien de clients maximum par période de développement et pourquoi ?",
+    "answer": "Je limite à **3 clients par mois** (ou un nombre compatible selon calendrier) pour garantir un **accompagnement personnalisé**, la qualité du produit, et pour permettre de consacrer le temps nécessaire à chaque projet (notamment les phases de test, sécurité, correctifs). Un projet complexe doit recevoir autant d’attention qu’un projet simple, sinon des détails importants risquent d’être négligés."
+  },
+  {
+    "question": "Le prix inclut‑il l’hébergement et les infrastructures techniques nécessaires ?",
+    "answer": "Le prix de développement inclut la livraison de l’application, mais **pas toujours tous les frais d’infrastructure** (hébergement, certificats, services externes, etc.). Je vous aide à choisir les meilleures options, mais les frais récurrents (serveurs, base de données, stockage, services tiers payants) restent à votre charge. Pour les apps complexes, ces coûts peuvent être plus élevés — nous les estimons dès le cadrage."
+  }
+];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

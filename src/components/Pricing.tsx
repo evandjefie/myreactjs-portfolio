@@ -117,7 +117,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                   <span className={`text-sm ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    Livraison 21 jours
+                    Livraison 31 jours
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -159,8 +159,8 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                 </a>
               </button> */}
               <a 
-                href="#contact"
-                className='w-full bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0U8bopkl-f_chXXiEmK2SAf6qH1E1O9JZN-rhenPk48HMHIz0xzx_cJa5Aff_UQgNODlF02E0a"
+                className='bg-[#19a89e] hover:bg-[#16968c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-center'
               >
                 Réserver Ma Place Maintenant
               </a>

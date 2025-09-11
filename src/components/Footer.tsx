@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ isDark }) => {
   return (
-    <footer className={`py-12 ${
+    <footer className={`xl:px-8 py-12 ${
       isDark ? 'bg-gray-900 border-t border-gray-700' : 'bg-gray-900 text-white'
     }`}>
       <div className="container mx-auto px-4">
@@ -14,8 +14,8 @@ const Footer: React.FC<FooterProps> = ({ isDark }) => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-[#19a89e] rounded-lg flex items-center justify-center">
-                <Code className="text-white" size={24} />
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                <img src="/flaticon.svg" alt="Logo" className="rounded-md w-8 h-full" />                
               </div>
               <span className="text-xl font-bold text-white">
                 Evan DJEFIE
