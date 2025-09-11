@@ -117,7 +117,7 @@ const Pricing: React.FC<PricingProps> = ({ isDark }) => {
                   <span className={`text-sm ${
                     isDark ? 'text-gray-300' : 'text-gray-600'
                   }`}>
-                    Livraison 21 jours
+                    Livraison 31 jours
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">

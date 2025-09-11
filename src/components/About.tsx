@@ -93,12 +93,12 @@ const About: React.FC<AboutProps> = ({ isDark }) => {
     {
       icon: Palette,
       title: "Designer",
-      description: "Identités visuelles"
+      description: "Graphisme et Identités visuelles"
     },
     {
       icon: Server,
       title: "DevOps",
-      description: "Déploiement et monitoring d'applications"
+      description: "Automatisation via CI/CD, IaC et mise en œuvre du monitoring applicatif"
     }
   ];
 
